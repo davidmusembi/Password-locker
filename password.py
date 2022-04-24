@@ -53,7 +53,7 @@ class Credentials():
     @classmethod
     def find_credential(cls, account):
         for credential in cls.credentials_list:
-                if credential.account == account:
+            if credential.account == account:
                 return credential
             
     @classmethod
@@ -64,7 +64,7 @@ class Credentials():
     @classmethod
     def if_credential_exist(cls, account):
         for credential in cls.credentials_list:
-                if credential.account == account:
+            if credential.account == account:
                 return True
         return False
     
