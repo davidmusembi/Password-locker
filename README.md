@@ -17,7 +17,7 @@ This is a python application that manages a user various account credentials for
 
 #### WHEN CLONING:
 * Open your terminal
-* initialize github, git clone https://github.com/davidmusembi/Password-locker
+* initialize github, git clone git@github.com:davidmusembi/Password-locker.git
 * cd Password-locker
 * open folder in prefered IDE
 
