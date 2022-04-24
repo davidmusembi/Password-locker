@@ -41,3 +41,10 @@ class TestClass(unittest.TestCase):
         self.assertEqual(self.new_credential.account,'Instagram')
         self.assertEqual(self.new_credential.userName,'Dave')
         self.assertEqual(self.new_credential.password,'Wg8htb52')
+        
+    def save_credential_test(self):
+        """
+        method to save the user to credential_list
+        """
+        self.new_credential.save_details()
+        self.assertEqual(len(Credentials.credentials_list),1)
