@@ -48,3 +48,15 @@ class TestClass(unittest.TestCase):
         """
         self.new_credential.save_details()
         self.assertEqual(len(Credentials.credentials_list),1)
+        
+    def tearDown(self):
+        Credentials.credentials_list = []
+        
+    def test_save_many_accounts(self):
+        """
+        TEST: save_many_accounts
+        """
+        self.new_credential.save_details()
+        test_credential = Credentials("snapchat","Dave","JFGN5KJV") 
+        test_credential.save_details()
+        self.assertEqual(len(Credentials.credentials_list),2)
