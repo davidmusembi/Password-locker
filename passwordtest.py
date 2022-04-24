@@ -64,6 +64,11 @@ class TestClass(unittest.TestCase):
     def test_delete_credential(self):
         """
         test method if one can delete an account
+        """
         self.new_credential.save_details()
         test_credential = Credentials("snapchat","Dave","JFGN5KJV")
         test_credential.save_details()
+        self.new_credential.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
+        
+    
