@@ -38,3 +38,8 @@ class Credentials():
             if(user.username == username and user.password == password):
                     a_user == user.username
         return a_user
+    
+    def __init__(self,account,userName, password):
+        self.account = account
+        self.userName = userName
+        self.password = password
