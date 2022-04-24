@@ -79,3 +79,12 @@ class TestClass(unittest.TestCase):
         the_credential = Credentials.find_credential("Instagram")
 
         self.assertEqual(the_credential.account,test_credential.account)
+    
+    def test_credential_exist(self):
+        """
+        test to check if one can find a credential
+    self.new_credential.save_details()
+        the_credential = Credentials("snapchat", "Dave", "JFGN5KJV")  
+        the_credential.save_details()
+        credential_is_found = Credentials.if_credential_exist("snapchat")
+        self.assertTrue(credential_is_found)
