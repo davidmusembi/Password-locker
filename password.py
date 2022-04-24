@@ -17,3 +17,13 @@ class User:
         method to save the user to user_list
         """
         User.user_list.append(self)
+        
+    @classmethod
+    def display_user(cls):
+        return cls.user_list
+
+    def delete_user(self):
+        """
+        deletes the user from user_list
+        """
+        User.user_list.remove(self)
