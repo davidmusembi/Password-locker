@@ -83,8 +83,19 @@ class TestClass(unittest.TestCase):
     def test_credential_exist(self):
         """
         test to check if one can find a credential
+        """
     self.new_credential.save_details()
         the_credential = Credentials("snapchat", "Dave", "JFGN5KJV")  
         the_credential.save_details()
         credential_is_found = Credentials.if_credential_exist("snapchat")
         self.assertTrue(credential_is_found)
+        
+    def test_display_all_saved_credentials(self):
+        """
+        method to display all the saved credential
+        """
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)
+
+if __name__ == "__main__":
+    unittest.main()
+     
