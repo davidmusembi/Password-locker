@@ -8,8 +8,8 @@ class User:
     """
     user_list = []
     
-     def __init__(self, username, password):
-          self.username = username
+    def __init__(self, username, password):
+        self.username = username
         self.password = password
         
     def save_user(self):
@@ -27,3 +27,14 @@ class User:
         deletes the user from user_list
         """
         User.user_list.remove(self)
+        
+class Credentials():
+    credentials_list = []
+    @classmethod
+    def verify_user(cls,username, password):
+        
+        a_user = ""
+        for user in User.user_list:
+            if(user.username == username and user.password == password):
+                    a_user == user.username
+        return a_user
